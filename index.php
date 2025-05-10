@@ -48,6 +48,7 @@ include_once('db.php');
                 foreach($allMedia as $media){
                   // print_r($media['path']);
                   $path = $media['path'];
+                  
                   echo "<img src='$path' width='100%' />";
                 }
               }
