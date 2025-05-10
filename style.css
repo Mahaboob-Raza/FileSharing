@@ -1,21 +1,21 @@
 /* index styling */
 .hero {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-  }
-  .feature-icon {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #2575fc;
-  }
-  footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 50px;
-  }
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #2575fc;
+}
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+}
 
 /* Navbar Styling */
 .navbar {
@@ -80,4 +80,90 @@
       margin-right: 0;
     }
   }
-  
+/*for signin and signup */
+/* Body Background for Auth Pages */
+body.auth {
+  background-color: cornflowerblue;
+  min-height: 100vh;
+}
+
+/* Centering Wrapper for Auth Pages */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+/* Auth Form Container */
+.auth-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  max-width: 425px;
+  width: 100%;
+  margin: auto;
+}
+
+.auth-container h2 {
+  color: #2575fc;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Form Labels & Inputs */
+.auth-container .form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.auth-container .form-control {
+  border: 1px solid #2575fc;
+  border-radius: 8px;
+}
+
+/* Primary Button */
+.auth-container .btn-primary {
+  background-color: #2575fc;
+  border-color: #2575fc;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.auth-container .btn-primary:hover {
+  background-color: #1a5de4;
+  border-color: #1a5de4;
+}
+
+/* Success & Error Messages */
+.auth-container .alert-success {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  border: none;
+}
+.auth-container .alert-danger {
+  background-color: #fdecea;
+  color: #b71c1c;
+  border: none;
+}
+
+/* Bottom Text Links */
+.auth-container p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.auth-container a {
+  color: #2575fc;
+  text-decoration: none;
+}
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Adjust spacing for smaller devices */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 30px 20px;
+  }
+}
