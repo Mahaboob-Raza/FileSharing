@@ -1,0 +1,83 @@
+/* index styling */
+.hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .feature-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #2575fc;
+  }
+  footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+/* Navbar Styling */
+.navbar {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    padding: 15px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #e0e7ff;
+    font-weight: 500;
+    margin-right: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .navbar-nav .nav-link:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /* Navbar Active Link */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  /* Toggler Icon for Mobile */
+  .navbar-toggler {
+    border-color: #e0e7ff;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(224,231,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  /* Mobile Navbar Styling */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px;
+    }
+  
+    .navbar .navbar-brand {
+      font-size: 1.4rem;
+    }
+  
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-link {
+      font-size: 1.1rem;
+      padding: 10px 0;
+      margin-right: 0;
+    }
+  }
+  

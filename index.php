@@ -1,89 +1,67 @@
-<?php 
-include_once('db.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Upload with jQuery and Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ImageUploader - Home</title>
+  <link rel="stylesheet" href="style.css">
+
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Font Awesome (for icons) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Bootstrap JS (Optional for Modal or other features) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-  <style>
-    .container {
-      margin-top: 50px;
-    }
-  </style>
 </head>
 <body>
-  <?php include('navbar.html'); ?>
-  <div class="container">
-    <h2 class="text-center">Upload a File</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <form id="uploadForm" enctype="multipart/form-data">
-          <div class="mb-3">
-            <label for="fileInput" class="form-label">Choose a file</label>
-            <input type="file" class="form-control" id="fileInput" name="file" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Upload</button>
-        </form>
+    <?php include('navbar.html'); ?>
 
-        <div id="response" class="mt-3"></div>
-        <div class="row">
-          <div class="col-md-12">
-            <?php
-              $getMediaByUser = $con->prepare("Select * from tbl_media where userId = '1' order by mediaId desc");
-              $getMediaByUser->execute();
-              if($getMediaByUser->rowCount() > 0){
-                $allMedia = $getMediaByUser->fetchAll();
-                foreach($allMedia as $media){
-                  // print_r($media['path']);
-                  $path = $media['path'];
-                  
-                  echo "<img src='$path' width='100%' />";
-                }
-              }
-            ?>
-          </div>
-      </div>
+    <!-- Hero Section -->
+    <div class="hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Welcome to ImageUploader</h1>
+        <p class="lead">Upload, manage and view your images easily and securely.</p>
+        <a href="main.php" class="btn btn-light btn-lg mt-3">Upload Now</a>
     </div>
-  </div>
+    </div>
 
-  <script>
-    $(document).ready(function() {
-      $('#uploadForm').submit(function(e) {
-        e.preventDefault();
+    <!-- Features Section -->
+    <div class="container my-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+        <div class="feature-icon">
+            <i class="fas fa-cloud-upload-alt"></i>
+        </div>
+        <h5>Fast Uploads</h5>
+        <p>Upload images quickly and store them securely on our server.</p>
+        </div>
+        <div class="col-md-4">
+        <div class="feature-icon">
+            <i class="fas fa-images"></i>
+        </div>
+        <h5>Manage Media</h5>
+        <p>Organize your images, view upload dates, and manage your gallery.</p>
+        </div>
+        <div class="col-md-4">
+        <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+        </div>
+        <h5>Secure Storage</h5>
+        <p>Your files are stored safely with modern security practices in place.</p>
+        </div>
+    </div>
+    </div>
 
-        var formData = new FormData(this);
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <p>&copy; 2025 ImageUploader. All Rights Reserved.</p>
+    </div>
+    </footer>
 
-        $.ajax({
-          url: 'upload.php', // Your server-side file handling script
-          type: 'POST',
-          data: formData,
-          contentType: false,
-          processData: false,
-          success: function(response) {
-            console.log(response)
-            $('#response').html('<div class="alert alert-success">File uploaded successfully!</div>');
-            setTimeout(() => {
-              window.location.reload()
-            }, 2000);
-          },
-          error: function() {
-            $('#response').html('<div class="alert alert-danger">Error uploading file. Please try again.</div>');
-          }
-        });
-      });
-    });
-  </script>
+    <!-- Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
