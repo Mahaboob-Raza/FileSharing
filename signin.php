@@ -13,8 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $user = $stmt->fetch();
 
   if ($user && password_verify($password, $user['password'])) {
-    $_SESSION['userId'] = $user['userId'];
-    $_SESSION['userName'] = $user['userName'];
+    $_SESSION['userId'] = $user['userId'];  // Directly assign the user ID to session
+    $_SESSION['userName'] = $user['userName'];  // Store the username if needed
     header("Location: main.php");
     exit();
   } else {
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sign In - ImageUploader</title>
+  <title>log In - ImageUploader</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap -->
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="auth">
-    <?php include('navbar.html'); ?>
+    <?php include('navbar.php'); ?>
     <div class="auth">
         <div class="auth-container">
             <div class="row justify-content-center">

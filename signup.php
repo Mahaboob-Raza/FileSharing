@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<?php include('navbar.html'); ?>
+<?php include('navbar.php'); ?>
 <body class="auth">
 <div >
     <div class="auth-container">

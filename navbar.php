@@ -1,4 +1,16 @@
-</head>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+
+if (isset($_GET['logout'])) {
+  session_unset();
+  session_destroy();
+  header("Location: signin.php");
+  exit();
+}
+?>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,11 +30,17 @@
             <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="signin.php">Log In</a>
-          </li>
+          <?php if (isset($_SESSION['userId'])): ?>
+            <li class="nav-item">
+              <a class="nav-link" href="?logout=true">Log Out</a>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a class="nav-link" href="signin.php">Log In</a>
+            </li>
+          <?php endif; ?>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
           </li>
@@ -30,3 +48,4 @@
       </div>
     </div>
   </nav>
+</body>

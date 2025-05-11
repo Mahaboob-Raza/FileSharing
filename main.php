@@ -1,6 +1,15 @@
 <?php 
+session_start(); 
 include_once('db.php');
+if (isset($_SESSION['userId'])) {   // if session exists
+  $currentUserId = $_SESSION['userId'];
+  echo "Logged in user ID: " . $currentUserId;
+} else {                            // if session doesn't exist
+  header("Location: signin.php");
+  exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +29,7 @@ include_once('db.php');
 
 </head>
 <body>
-  <?php include('navbar.html'); ?>
+  <?php include('navbar.php'); ?>
   <div class="container">
     <h2 class="text-center">Upload a File</h2>
     <div class="row justify-content-center">
@@ -36,15 +45,14 @@ include_once('db.php');
         <div id="response" class="mt-3"></div>
         <div class="row">
           <div class="col-md-12">
-            <?php
-              $getMediaByUser = $con->prepare("Select * from tbl_media where userId = '1' order by mediaId desc");
-              $getMediaByUser->execute();
+          <?php
+              $userId = $_SESSION['userId']; // Use session userId
+              $getMediaByUser = $con->prepare("SELECT * FROM tbl_media WHERE userId = ? ORDER BY mediaId DESC");
+              $getMediaByUser->execute([$userId]);
               if($getMediaByUser->rowCount() > 0){
                 $allMedia = $getMediaByUser->fetchAll();
                 foreach($allMedia as $media){
-                  // print_r($media['path']);
                   $path = $media['path'];
-                  
                   echo "<img src='$path' width='100%' />";
                 }
               }

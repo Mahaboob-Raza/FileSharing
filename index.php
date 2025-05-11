@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <?php include('navbar.html'); ?>
+    <?php include('navbar.php'); ?>
 
     <!-- Hero Section -->
     <div class="hero">
