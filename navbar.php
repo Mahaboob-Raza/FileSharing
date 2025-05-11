@@ -42,7 +42,10 @@ if (isset($_GET['logout'])) {
             </li>
           <?php endif; ?>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="main.php">Upload</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.php">profile</a>
           </li>
         </ul>
       </div>

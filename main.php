@@ -3,7 +3,6 @@ session_start();
 include_once('db.php');
 if (isset($_SESSION['userId'])) {   // if session exists
   $currentUserId = $_SESSION['userId'];
-  echo "Logged in user ID: " . $currentUserId;
 } else {                            // if session doesn't exist
   header("Location: signin.php");
   exit();
