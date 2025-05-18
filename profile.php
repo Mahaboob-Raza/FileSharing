@@ -97,12 +97,17 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
         foreach($images as $image) {
             echo "<div class='col-md-4 col-sm-6 mb-4'>";
             echo "  <div class='profile-image-card card shadow-sm h-100'>";
-            echo "      <img src='$image' class='card-img-top rounded img-fluid' alt='User Image'>";
+            echo "      <a href='$image' target='_blank'>";
+            echo "          <img src='$image' class='card-img-top rounded img-fluid' alt='User Image'>";
+            echo "      </a>";
             echo "      <div class='card-body text-center'>";
-            echo "          <form method='post' class='d-inline'>";
-            echo "              <input type='hidden' name='delete_image' value='$image'>";
-            echo "              <button type='submit' name='delete' class='btn btn-danger btn-sm profile-btn-delete' onclick=\"return confirm('Delete this image?')\">Delete</button>";
-            echo "          </form>";
+            echo "          <div class='d-flex justify-content-center gap-2'>";
+            echo "              <a href='$image' download class='btn btn-success btn-sm'>Download</a>";
+            echo "              <form method='post' class='d-inline'>";
+            echo "                  <input type='hidden' name='delete_image' value='$image'>";
+            echo "                  <button type='submit' name='delete' class='btn btn-danger btn-sm' onclick=\"return confirm('Delete this image?')\">Delete</button>";
+            echo "              </form>";
+            echo "          </div>";
             echo "      </div>";
             echo "  </div>";
             echo "</div>";
@@ -155,6 +160,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
         </form>
     </div>
 </div>
+
 
 <script>
 // Bootstrap validation
