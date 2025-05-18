@@ -79,6 +79,65 @@ footer {
       margin-right: 0;
     }
   }
+/* for mian page */
+.files-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.file-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-card:hover {
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.2);
+}
+
+.file-thumb {
+  max-height: 100px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.file-name {
+  font-size: 0.9rem;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-icon {
+  font-size: 48px;
+  color: #000080;
+  margin-bottom: 8px;
+}
+.right-content {
+  border-left: 2px solid #ddd;
+}
+.drive-left-panel {
+  border-right: 2px solid #ddd;
+  height: 100vh; /* optional: full height */
+}
+
+
+
+
 /*for signin and signup */
 /* Body Background for Auth Pages */
 body.auth {
