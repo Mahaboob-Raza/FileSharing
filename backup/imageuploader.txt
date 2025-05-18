@@ -1,0 +1,28 @@
+===Database imageuploader
+
+== Table structure for table tbl_media
+
+|------
+|Column|Type|Null|Default
+|------
+|mediaId|int(11)|No|
+|userId|int(11)|Yes|NULL
+|path|varchar(250)|No|
+|media_name|varchar(100)|Yes|NULL
+|uploaded_on|datetime|No|current_timestamp()
+== Dumping data for table tbl_media
+
+|0|1|images/5211-4color.gif|images/5211-4color.gif|2025-05-18 14:27:25
+== Table structure for table tbl_user
+
+|------
+|Column|Type|Null|Default
+|------
+|//**userId**//|int(11)|No|
+|userName|varchar(100)|No|
+|**email**|varchar(255)|No|
+|password|varchar(255)|No|
+|created_on|datetime|Yes|current_timestamp()
+== Dumping data for table tbl_user
+
+|1|mahaboob raza|test1@gmail.com|$2y$10$A5EV.TClUPqil56UoIVyvesq4iwNqOz8v2efX6le1BVXxXm9ZGDWi|2025-05-18 14:26:46

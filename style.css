@@ -1,17 +1,16 @@
 /* index styling */
 .hero {
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
+  background: #000080 !important;
+  color: #FFFFF0 !important;
 }
+
 .feature-icon {
   font-size: 40px;
   margin-bottom: 20px;
-  color: #2575fc;
+  color: #000080;
 }
 footer {
-  background-color: #f8f9fa;
+  background-color: #FFFFF0;
   padding: 20px 0;
   text-align: center;
   margin-top: 50px;
@@ -19,7 +18,7 @@ footer {
 
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(to right, #2575fc, #6a11cb);
+    background: linear-gradient(to right, #000080, #000080);
     padding: 15px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
@@ -27,13 +26,13 @@ footer {
   .navbar .navbar-brand {
     font-weight: 700;
     font-size: 1.6rem;
-    color: #ffffff;
+    color: #FFFFF0;
     letter-spacing: 1px;
   }
   
   .navbar .navbar-nav .nav-link {
     font-size: 1rem;
-    color: #e0e7ff;
+    color: #FFFFF0;
     font-weight: 500;
     margin-right: 20px;
     text-transform: uppercase;
@@ -41,23 +40,23 @@ footer {
   }
   
   .navbar .navbar-nav .nav-link:hover {
-    color: #ffffff;
+    color: #FFFFF0;
     text-decoration: none;
   }
   
   /* Navbar Active Link */
   .navbar-nav .nav-item.active .nav-link {
-    color: #ffffff;
+    color: #FFFFF0;
     font-weight: 600;
   }
   
   /* Toggler Icon for Mobile */
   .navbar-toggler {
-    border-color: #e0e7ff;
+    border-color: #FFFFF0;
   }
   
   .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(224,231,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,240, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
   
   /* Mobile Navbar Styling */
@@ -83,7 +82,7 @@ footer {
 /*for signin and signup */
 /* Body Background for Auth Pages */
 body.auth {
-  background-color: cornflowerblue;
+  background-color: #000080;
   min-height: 100vh;
 }
 
@@ -106,7 +105,7 @@ body.auth {
 }
 
 .auth-container h2 {
-  color: #2575fc;
+  color: #000080;
   font-weight: 600;
   margin-bottom: 25px;
   text-align: center;
@@ -119,26 +118,26 @@ body.auth {
 }
 
 .auth-container .form-control {
-  border: 1px solid #2575fc;
+  border: 1px solid #000080;
   border-radius: 8px;
 }
 
 /* Primary Button */
 .auth-container .btn-primary {
-  background-color: #2575fc;
-  border-color: #2575fc;
+  background-color: #000080;
+  border-color: #000080;
   border-radius: 8px;
   font-weight: 500;
 }
 .auth-container .btn-primary:hover {
-  background-color: #1a5de4;
-  border-color: #1a5de4;
+  background-color: #000066;
+  border-color: #000066;
 }
 
 /* Success & Error Messages */
 .auth-container .alert-success {
-  background-color: #e3f2fd;
-  color: #0d47a1;
+  background-color: #fffff0cc;
+  color: #000080;
   border: none;
 }
 .auth-container .alert-danger {
@@ -154,7 +153,7 @@ body.auth {
   font-size: 14px;
 }
 .auth-container a {
-  color: #2575fc;
+  color: #000080;
   text-decoration: none;
 }
 .auth-container a:hover {
@@ -171,7 +170,7 @@ body.auth {
 /*profile*/
 
 .profile {
-  background-color: #f8f9fa;
+  background-color: #FFFFF0;
 }
 .profile-card {
     max-width: 600px;
