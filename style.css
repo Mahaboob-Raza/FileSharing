@@ -1,7 +1,10 @@
 /* index styling */
 .hero {
   background: #000080 !important;
+  text-align: center;
+  padding: 5%;
   color: #FFFFF0 !important;
+  border-radius: 10px;
 }
 
 .feature-icon {
@@ -12,14 +15,14 @@
 footer {
   background-color: #FFFFF0;
   padding: 20px 0;
-  text-align: center;
   margin-top: 50px;
 }
 
 /* Navbar Styling */
 .navbar {
-    background: linear-gradient(to right, #000080, #000080);
-    padding: 15px 0;
+    background: linear-gradient(to right, #0606e6, #000080);
+    border-radius: 2%;
+    padding: 15px 0px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
   
@@ -79,7 +82,17 @@ footer {
       margin-right: 0;
     }
   }
+
 /* for mian page */
+
+.main-container {
+  background: linear-gradient(45deg, #9b92eb, #000080);
+  border-radius: 1%;
+}
+.left {
+  background-color: #fffffff0;
+}
+
 .files-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
